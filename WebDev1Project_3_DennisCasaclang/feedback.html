@@ -1,0 +1,122 @@
+<!-------w---------
+
+    Project 3
+    Name: Dennis Casaclang
+    Date: March 30, 2021
+    Description: Project 3 Feedback Page HTML
+
+------------------>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>DMC Electronics - Customer Feedback</title>
+	<link rel="stylesheet" type="text/css" href="p3styles.css" />
+	<script type = "text/javascript" src ="project3Feedbacks.js"></script>
+</head>
+
+<body>
+	<section id = "container">
+		<header>
+			<div id = "headingRow1">
+				<img id="headerBackground" src="images/headerBackground.jpg" alt="" />
+				<p><img id = "companyLogo" src = "images/companyLogo.png" alt = ""/></p>
+			</div>
+			<div id = "headingNav">
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="products.html">Products and Services</a></li>
+						<li><a href="#">Customer Feedback</a></li>
+						<li class = "aboutUs"><a href="#">About Us</a></li>
+						<li><a href="https://twitter.com/bestbuycanada">Twitter</a></li>
+						<li><a href="https://www.facebook.com/bestbuy/">Facebook</a></li>
+						<li class = "contactNumber"><a href="#">Contact Number</a></li>
+					</ul>
+				</nav>	
+			</div>
+		</header>
+		<section id = "mainContent">
+			<div id = "content1"><a href="#">Customer Feedback</a></div>
+			<h3 id = "currentPage">Customer Feedback</h3>
+			<h4 id = "newsUpdates">Feedback Form</h4>
+			<form id = "feedbackForm" action = "index.html" method = "post">
+				<fieldset id="feedbackInfo">
+					<div id = "firstNews">
+						<div id = newsDate1>
+						<ul>
+							<li>
+								<label for="fullname">Full Name</label>
+								<input id="fullname" name="fullname" type="text" />
+								<p class="feedbackError error" id="fullname_error">* Required field</p>
+							</li>
+							<li>
+								<label for="phone">Phone Number:</label>
+								<input id="phone" name="phone" type="tel" />
+								<p class="feedbackError error" id="phone_error">* Required field</p>
+								<p class="feedBackError error" id="phoneformat_error">* Invalid phone number. Must be 10 digits</p>
+							</li>
+							<li>
+								<label for="email">Email:</label>
+								<input id="email" name="email" type="email" />
+								<p class="feedbackError error" id="email_error">* Required field</p>
+								<p class="feedBackError error" id="emailformat_error">* Invalid email. Must have @ symbol and domain name.</p>
+							</li>
+							<li>
+									<label for="comments">Comments:</label>
+									<textarea id= "comments" rows= "20" cols = "100" placeholder="Enter feedback here..."></textarea>
+									<p class="feedbackError error" id="comments_error">* Required field</p>
+							</li>
+						</ul>
+						<p class="center">
+							<button type="reset" id="clear">Reset Form</button>
+							<button type="submit" id="submit">Submit Feedback</button>
+						</p>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</section>
+		<aside>
+			<div id = "asideNav">
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="products.html">Products and Services</a></li>
+						<li><a href="#">Customer Feedback</a></li>
+						<li class = "aboutUs"><a href="#">About Us</a></li>
+						<li><a href="https://twitter.com/bestbuycanada">Twitter</a></li>
+						<li><a href="https://www.facebook.com/bestbuy/">Facebook</a></li>
+						<li class = "contactNumber"><a href="#">Contact Number</a></li>
+					</ul>
+				</nav>	
+			</div>
+			<div id = "asidePromo">
+				<h4>Spring cleaning sale</h4>
+				<p><img id="halfPrice" src= "images/halfPrice.png" alt=""/>Save 50% off in select items in store, or online now! Take advantage of our Spring sale with items ranging from Laptops, Computers, Televisions, Phones, and many more! Visit our stores or purchase <a href="products.html">online.</a></p>
+			</div>
+		</aside>
+		<footer>
+			<div id = footerRow>
+				<div id = "footerNav">
+					<nav>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="products.html">Products and Services</a></li>
+							<li><a href="#">Customer Feedback</a></li>
+							<li class = "aboutUs"><a href="#">About Us</a></li>
+							<li><a href="https://twitter.com/bestbuycanada">Twitter</a></li>
+							<li><a href="https://www.facebook.com/bestbuy/">Facebook</a></li>
+							<li class = "contactNumber"><a href="#">Contact Number</a></li>
+						</ul>
+					</nav>	
+				</div>
+				<div id = "footerParagraph">Copyright &#169; 2021 <a href="#">DMC Electronics Inc.</a></div>
+				<div id = "footerParagraph2">775 Nairn Avenue, Winnipeg, MB, Canada R1R 1R1</div>
+			</div>
+		</footer>
+
+	</section>
+</body>
+</html>

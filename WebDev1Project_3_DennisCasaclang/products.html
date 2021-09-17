@@ -1,0 +1,164 @@
+<!-------w---------
+
+    Project 3
+    Name: Dennis Casaclang
+    Date: March 30, 2021
+    Description: Project 3 Products Page HTML
+
+------------------>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>DMC Electronics - Products and Services</title>
+	<link rel="stylesheet" type="text/css" href="p3styles.css" />
+	<script type = "text/javascript" src ="project3Products.js"></script>
+</head>
+
+<body>
+	<section id = "container">
+		<header>
+			<div id = "headingRow1">
+				<img id="headerBackground" src="images/headerBackground.jpg" alt="" />
+				<p><img id = "companyLogo" src = "images/companyLogo.png" alt = ""/></p>
+			</div>
+			<div id = "headingNav">
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="#">Products and Services</a></li>
+						<li><a href="feedback.html">Customer Feedback</a></li>
+						<li class = "aboutUs"><a href="#">About Us</a></li>
+						<li><a href="https://twitter.com/bestbuycanada">Twitter</a></li>
+						<li><a href="https://www.facebook.com/bestbuy/">Facebook</a></li>
+						<li class = "contactNumber"><a href="#">Contact Number</a></li>
+					</ul>
+				</nav>	
+			</div>
+		</header>
+			<form id = "purchaseForm" action = "index.html" method = "post">
+			<section id = "mainContent">
+			<div id = "content1"><a href="#">Products and Services</a></div>
+			<h3 id = "currentPage">Products and Services</h3>
+			<h4 id = "newsUpdates">Products</h4>
+
+			<div id = "firstNews">
+				<ul>
+					<li>
+						<div id = newsDate1>
+							<h5>Playstatin 5</h5>
+							<p>The newest console is finally here! Get it in store or online.<img id="newsOneImageOne" src= "images/ps5.jpg" alt=""/></p>
+							<h6>Enjoy a wide range of new games including NAB 2K21, Devil Souls, Duty of Call!</h6>
+							<h4>$799</h4>
+							<div class="quantityField" id="item1">
+								<input id="qty1" name="qty1" class="qty" value="" type="text" placeholder="0" autofocus="autofocus" />
+								<button type="button" id="addPS5">Add</button>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div id = newsDate2>
+							<h5>Alienwear Laptop</h5>
+							<p>The fastest laptop in the industry, enjoy playing games and working on this fast and quiet laptop! <img id="newsOneImageTwo" src= "images/laptop.jpg" alt=""/></p>
+							<h6>Included in the purchase of this laptop is a one year warranty and free repair!</h6>
+							<h4>$1599</h4>
+							<div class="quantityField" id="item2">
+								<input id="qty2" name="qty2" class="qty" value="" type="text" placeholder="0" />
+								<button type="button" id="addLaptop">Add</button>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div id = newsDate3>
+							<h5>GL Television</h5>
+							<p>The latest tv with smart features. Connect to wifi with ease! <img id="newsOneImageThree" src= "images/television.jpg" alt=""/></p>
+							<h6>One year warranty included with purchase!</h6>
+							<h4>$599</h4>
+							<div class="quantityField" id="item3">
+								<input id="qty3" name="qty3" class="qty" value="" type="text" placeholder="0"/>
+								<button type="button" id="addTV">Add</button>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<h4 id = "locations">Services</h4>
+			<div id = "secondNews">
+				<ul>
+					<li>
+						<div id = locationOne>
+							<h5>Computer and Laptop Repairs</h5>
+							<p>Repair a wide range of computer problems including blue screen, power issues, and virus removal.<img id="buildingOne" src= "images/pcrepair.jpg" alt=""/></p>
+							<h6>We specialize in Alienwear PC and Laptop repairs. Free cleaning for each repair!</h6>
+							<h4>$20</h4>
+							<div class="quantityField" id="item4">
+								<input id="qty4" name="qty4" class="qty" value="" type="text" placeholder="0" />
+								<button type="button" id="addRepairs">Add</button>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div id = locationTwo>
+							<h5>Computer Upgrades</h5>
+							<p>Upgrade your PC's video card, memory, storage, and many more!<img id="buildingTwo" src= "images/pcupgrade.jpg" alt=""/></p>
+							<h6>Free PC or Laptop cleaning for each upgrade!</h6>
+							<h4>$20</h4>
+							<div class="quantityField" id="item5">
+								<input id="qty5" name="qty5" class="qty" value="" type="text" placeholder="0" />
+								<button type="button" id="addUpgrades">Add</button>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div id= "cart">
+				<p>Total Order Amount:
+					<span id = "cartTotal">$0</span>
+					<button type ="submit" id="submit">Purchase Items</button>
+				</p>
+			</div>
+		</section>
+		</form>
+		<aside>
+			<div id = "asideNav">
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="#">Products and Services</a></li>
+						<li><a href="feedback.html">Customer Feedback</a></li>
+						<li class = "aboutUs"><a href="#">About Us</a></li>
+						<li><a href="https://twitter.com/bestbuycanada">Twitter</a></li>
+						<li><a href="https://www.facebook.com/bestbuy/">Facebook</a></li>
+						<li class = "contactNumber"><a href="#">Contact Number</a></li>
+					</ul>
+				</nav>	
+			</div>
+			<div id = "asidePromo">
+				<h4>Spring cleaning sale</h4>
+				<p><img id="halfPrice" src= "images/halfPrice.png" alt=""/>Save 50% off in select items in store, or online now! Take advantage of our Spring sale with items ranging from Laptops, Computers, Televisions, Phones, and many more! Visit our stores or purchase <a href="products.html">online.</a></p>
+			</div>
+		</aside>
+		<footer>
+			<div id = footerRow>
+				<div id = "footerNav">
+					<nav>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="#">Products and Services</a></li>
+							<li><a href="feedback.html">Customer Feedback</a></li>
+							<li class = "aboutUs"><a href="#">About Us</a></li>
+							<li><a href="https://twitter.com/bestbuycanada">Twitter</a></li>
+							<li><a href="https://www.facebook.com/bestbuy/">Facebook</a></li>
+							<li class = "contactNumber"><a href="#">Contact Number</a></li>
+						</ul>
+					</nav>	
+				</div>
+				<div id = "footerParagraph">Copyright &#169; 2021 <a href="#">DMC Electronics Inc.</a></div>
+				<div id = "footerParagraph2">775 Nairn Avenue, Winnipeg, MB, Canada R1R 1R1</div>
+			</div>
+		</footer>
+
+	</section>
+</body>
+</html>

@@ -1,0 +1,246 @@
+/******w***********
+    
+    Project 3 Stylesheet
+    Name: Dennis Casaclang
+    Date: March 30, 2021
+    Description: Project 3 CSS File
+
+******************/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #1CE6E3;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+#container{
+	margin: 5px 5px 5px 5px;
+	box-shadow: 2px 2px 2px grey;
+	border-radius: 5px;
+	background-color: #A9A9A9;
+}
+
+header{
+	width: 100%;
+	text-align: center;
+}
+
+#headerBackground{
+	width:100%;
+	padding-top: 20px;
+	height: 150px;
+	vertical-align: top;
+}
+
+#companyLogo{
+	display: flex;
+	position: absolute;
+	top: 40px;
+	left: 25px;
+}
+
+ul li a
+{
+	text-decoration: none;
+}
+
+#headingNav {
+	background: linear-gradient(#80CCFF, #006BB3);
+}
+
+#headingNav nav{
+	display: flex;
+	height: 25px;
+	flex-wrap: column wrap;
+}
+
+#headingNav ul{
+	margin: auto;
+	font-size: x-small;
+	font-weight: bold;
+}
+
+#headingNav nav ul li{
+	display: inline;
+	list-style: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-transform: uppercase;
+}
+
+aside{
+	width: 28%;
+	float:left;
+	background-color: #b3b3e6;
+	display: block;
+}
+
+#asideNav nav{
+	padding-bottom: 30px;
+	border-bottom: 1px solid #ff0000;
+	list-style: initial;
+	list-style-position: inside;
+}
+
+#asideNav nav ul{
+	margin: auto;
+	font-size: x-small;
+	font-weight: bolder;
+}
+
+#asideNav nav ul li{
+	height: 50px;
+	padding-top: 5px;
+	padding-left: 10px;
+	font-size: 20px;
+	list-style: none;
+	text-transform: uppercase;
+	background: linear-gradient(#E6E6E6, #B3B3B3);
+}
+
+#asidePromo{
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid #606;
+}
+
+#halfPrice{
+	float: right;
+}
+
+#mainContent {
+	width: 70%;
+	float:right;
+	margin-right: 5px;
+	padding-right: 5px;
+	padding-left: 20px;
+	padding-bottom: 50px;
+	background-color: white;
+}
+
+#content1{
+	padding-top: 5px;
+}
+
+#firstNews input {
+	width:20px;
+}
+
+#secondNews input{
+	width: 20px;
+}
+#firstNews ul li{
+	border: 1px solid #606;
+	list-style: none;
+}
+#secondNews ul li{
+	border: 1px solid #606;
+	list-style: none;
+}
+#firstNews, #secondNews{
+	border: 1px solid #606;
+	padding: 10px;
+	padding-bottom: 40px;
+	margin-bottom: 20px;
+}
+
+#feedbackInfo{
+	border:none;
+}
+
+#feedbackInfo ul li label{
+	display: inline-block;
+	float:left;
+	width: 250px;
+}
+#feedbackInfo ul li input{
+	width: 715px;
+	text-align: left;
+}
+
+#feedbackInfo input:focus, textarea:focus{
+	background: #70DB70;
+	color: #FF0000;
+}
+
+.center{
+	padding-top: 10px;
+}
+#submit{
+	float:right;
+}
+.quantityField{
+	float:right;
+}
+
+.error{
+	color:red;
+}
+#cart{
+	float:right;
+}
+
+#cartTotal{
+	border: 1px solid #606;
+	background-color: #339933;
+	color: #FFFFFF;
+	padding-right: 40px;
+	margin-right: 30px;
+}
+
+#newsDate1, #newsDate2, #newsDate3, #locationOne, #locationTwo{
+	padding: 20px;
+	margin: 20px;
+}
+#newsOneImageOne, #newsOneImageTwo, #newsOneImageThree, #buildingOne, #buildingTwo{
+	float:left;
+	margin-right: 20px;
+}
+
+h3, h4{
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+footer{
+	clear: both;
+	height: 50px;
+	text-align: center;
+	background: linear-gradient(#34ebe8, #B3B3B3);
+	font-size: xx-small;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+#footerNav nav ul li{
+	display: inline;
+	padding-left: 5px;
+	padding-right: 5px;
+	list-style: none;
+}
+
+nav ul :hover{
+	background: linear-gradient(#80FF80, #00CC00);
+}
+
+#asideNav nav :hover{
+	background: linear-gradient(#80FF80, #00CC00);
+}
+
+@media(max-width: 1530px){
+	#mainContent{
+		display:none;
+	}
+	#headingNav nav
+	{
+		display:none;
+	}
+	aside
+	{
+		width: 100%;
+	}
+}
