@@ -1,0 +1,432 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RRCAGLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:Casaclang.Dennis.Business.Accessories">
+            <summary>
+            Specifies the accesssories of a car.
+            </summary>
+        </member>
+        <member name="F:Casaclang.Dennis.Business.Accessories.None">
+            <summary>
+            No accessories.
+            </summary>
+        </member>
+        <member name="F:Casaclang.Dennis.Business.Accessories.StereoSystem">
+            <summary>
+            Stereo System.
+            </summary>
+        </member>
+        <member name="F:Casaclang.Dennis.Business.Accessories.LeatherInterior">
+            <summary>
+            Leather interior.
+            </summary>
+        </member>
+        <member name="F:Casaclang.Dennis.Business.Accessories.StereoAndLeather">
+            <summary>
+            Stereo and Leather accessories.
+            </summary>
+        </member>
+        <member name="F:Casaclang.Dennis.Business.Accessories.ComputerNavigation">
+            <summary>
+            Computer Navigation.
+            </summary>
+        </member>
+        <member name="F:Casaclang.Dennis.Business.Accessories.StereoAndNavigation">
+            <summary>
+            Stereo and Navigation accessories.
+            </summary>
+        </member>
+        <member name="F:Casaclang.Dennis.Business.Accessories.LeatherAndNavigation">
+            <summary>
+            Leather and Navigation accessories.
+            </summary>
+        </member>
+        <member name="F:Casaclang.Dennis.Business.Accessories.All">
+            <summary>
+            All accessories.
+            </summary>
+        </member>
+        <member name="T:Casaclang.Dennis.Business.CarWashInvoice">
+            <summary>
+            This class contains functionality that supports the business process of creating an invoice for the car wash department. 
+            </summary>
+        </member>
+        <member name="E:Casaclang.Dennis.Business.CarWashInvoice.PackageCostChanged">
+            <summary>
+            Occurs when the package cost changes.
+            </summary>
+        </member>
+        <member name="E:Casaclang.Dennis.Business.CarWashInvoice.FragranceCostChanged">
+            <summary>
+            Occurs when the fragrance cost changes.
+            </summary>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.CarWashInvoice.PackageCost">
+            <summary>
+            Gets and sets the amount charged for the chosen package.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">The value cannot be less than 0.</exception>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.CarWashInvoice.FragranceCost">
+            <summary>
+            Gets and sets the amount charged for the chosen fragrance.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">The value cannot be less than 0.</exception>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.CarWashInvoice.ProvincialSalesTaxCharged">
+            <summary>
+            Gets the amount of provincial sales tax charged to the customer. No provincial sales tax is charged for a car wash.
+            </summary>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.CarWashInvoice.GoodsAndServicesTaxCharged">
+            <summary>
+            Gets the amount of goods and services tax charged to the customer.
+            </summary>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.CarWashInvoice.SubTotal">
+            <summary>
+            Gets the subtotal of the Invoice
+            </summary>
+        </member>
+        <member name="M:Casaclang.Dennis.Business.CarWashInvoice.#ctor(System.Decimal,System.Decimal)">
+            <summary>
+            Initializes an instance of CarWashInvoice with a provincial and goods and services tax rates. The package cost and fragrance cost are zero.
+            </summary>
+            <param name="provincialSalesTaxRate">The rate of provincial tax charged to a customer.</param>
+            <param name="goodsAndServicesTaxRate">The rate of goods and services tax charged to a customer.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">The provincial sales tax rate and goods and services tax rate cannot be less than 0 or greater than 1.</exception>
+        </member>
+        <member name="M:Casaclang.Dennis.Business.CarWashInvoice.#ctor(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+            <summary>
+            Initializes an instance of CarWashInvoice with a provincial and goods and services tax rates. The package cost and fragrance cost are zero.
+            </summary>
+            <param name="provincialSalesTaxRate">The rate of provincial tax charged to a customer.</param>
+            <param name="goodsAndServicesTaxRate">The rate of goods and services tax charged to a customer.</param>
+            /// <param name="packageCost">The cost of the chosen package.</param>
+            /// <param name="fragranceCost">The cost of the chosen fragrance.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">The provincial sales tax rate and goods and services tax rate cannot be less than 0 or greater than 1. Package and Fragrance Cost cannot be less than 0.</exception>
+        </member>
+        <member name="M:Casaclang.Dennis.Business.CarWashInvoice.OnPackageCostChanged">
+            <summary>
+            Raises the PackageCostChanged event.
+            </summary>
+        </member>
+        <member name="M:Casaclang.Dennis.Business.CarWashInvoice.OnFragranceCostChanged">
+            <summary>
+            Raises the FragranceCostChanged event.
+            </summary>
+        </member>
+        <member name="T:Casaclang.Dennis.Business.Financial">
+            <summary>
+            This static class contains functionality that includes financial functions.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">The rate cannot be less than 0 or greater than 1. The number of payment periods cannot be less than or equal to 0. The present value cannot be less than or equal to 0.</exception>
+        </member>
+        <member name="M:Casaclang.Dennis.Business.Financial.GetPayment(System.Decimal,System.Int32,System.Decimal)">
+            <summary>
+            Returns the payment amount for an annuity based on periodic, fixed payments and a fixed interest rate.
+            </summary>
+        </member>
+        <member name="T:Casaclang.Dennis.Business.CostType">
+            <summary>
+            Specifies the type of cost.
+            </summary>
+        </member>
+        <member name="F:Casaclang.Dennis.Business.CostType.Labour">
+            <summary>
+            Labour cost.
+            </summary>
+        </member>
+        <member name="F:Casaclang.Dennis.Business.CostType.Part">
+            <summary>
+            Parts cost.
+            </summary>
+        </member>
+        <member name="F:Casaclang.Dennis.Business.CostType.Material">
+            <summary>
+            Materials cost.
+            </summary>
+        </member>
+        <member name="T:Casaclang.Dennis.Business.ExteriorFinish">
+            <summary>
+            Specifies the exterior finish of a car.
+            </summary>
+        </member>
+        <member name="F:Casaclang.Dennis.Business.ExteriorFinish.None">
+            <summary>
+            No exterior finish.
+            </summary>
+        </member>
+        <member name="F:Casaclang.Dennis.Business.ExteriorFinish.Standard">
+            <summary>
+            Standard exterior finish.
+            </summary>
+        </member>
+        <member name="F:Casaclang.Dennis.Business.ExteriorFinish.Pearlized">
+            <summary>
+            Pearlized exterior finish.
+            </summary>
+        </member>
+        <member name="F:Casaclang.Dennis.Business.ExteriorFinish.Custom">
+            <summary>
+            Custom exterior finish.
+            </summary>
+        </member>
+        <member name="T:Casaclang.Dennis.Business.Invoice">
+            <summary>
+            Represents an Invoice for the business.
+            </summary>
+        </member>
+        <member name="E:Casaclang.Dennis.Business.Invoice.ProvincialSalesTaxRateChanged">
+            <summary>
+            Occurs when the provincial sales tax rate of the Invoice changes.
+            </summary>
+        </member>
+        <member name="E:Casaclang.Dennis.Business.Invoice.GoodsAndServicesTaxRateChanged">
+            <summary>
+            Occurs when the goods and services tax rate of the Invoice changes.
+            </summary>
+        </member>
+        <member name="M:Casaclang.Dennis.Business.Invoice.#ctor(System.Decimal,System.Decimal)">
+            <summary>
+            Initializes an instance of Invoice with a provincial and goods and services tax rates.
+            </summary>
+            <param name="provincialSalesTaxRate">The rate of provincial tax charged to a customer.</param>
+            <param name="goodsAndServicesTaxRate">The rate of goods and services tax charged to a customer.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">The provincial sales tax rate and goods and services tax rate cannot be less than 0 or greater than 1.</exception>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.Invoice.ProvincialSalesTaxRate">
+            <summary>
+            Gets and sets the provincial sales tax rate.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">The value cannot be less than 0 or greater than 1.</exception>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.Invoice.GoodsAndServicesTaxRate">
+            <summary>
+            Gets and sets the goods and services tax rate.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">The value cannot be less than 0 or greater than 1.</exception>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.Invoice.ProvincialSalesTaxCharged">
+            <summary>
+            Gets the amount of provincial sales tax charged to the customer.
+            </summary>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.Invoice.GoodsAndServicesTaxCharged">
+            <summary>
+            Gets the amount of goods and services tax charged to the customer.
+            </summary>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.Invoice.SubTotal">
+            <summary>
+            Gets the subtotal of the Invoice.
+            </summary>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.Invoice.Total">
+            <summary>
+            Gets the total of the Invoice (Subtotal + Taxes).
+            </summary>
+        </member>
+        <member name="M:Casaclang.Dennis.Business.Invoice.OnProvincialSalesTaxRateChanged">
+            <summary>
+            Raises the ProvincialSalesTaxRateChanged event.
+            </summary>
+        </member>
+        <member name="M:Casaclang.Dennis.Business.Invoice.OnGoodsAndServicesTaxRateChanged">
+            <summary>
+            Raises the GoodsAndServicesTaxRateChanged event.
+            </summary>
+        </member>
+        <member name="T:Casaclang.Dennis.Business.SalesQuote">
+            <summary>
+            Represents a Sales Quote for the business.
+            </summary>
+        </member>
+        <member name="E:Casaclang.Dennis.Business.SalesQuote.VehiclePriceChanged">
+            <summary>
+            Occurs when the price of the vehicle being quoted on changes.
+            </summary>
+        </member>
+        <member name="E:Casaclang.Dennis.Business.SalesQuote.TradeInAmountChanged">
+            <summary>
+            Occurs when the amount for the trade in vehicle changes.
+            </summary>
+        </member>
+        <member name="E:Casaclang.Dennis.Business.SalesQuote.AccessoriesChosenChanged">
+            <summary>
+            Occurs when the chosen accessories changes.
+            </summary>
+        </member>
+        <member name="E:Casaclang.Dennis.Business.SalesQuote.ExteriorFinishChosenChanged">
+            <summary>
+            Occurs when the chose exterior finish changes.
+            </summary>
+        </member>
+        <member name="M:Casaclang.Dennis.Business.SalesQuote.#ctor(System.Decimal,System.Decimal,System.Decimal,Casaclang.Dennis.Business.Accessories,Casaclang.Dennis.Business.ExteriorFinish)">
+            <summary>
+            Initializes and instance of the SalesQuote class with the specified vehicleSalePrice, tradeInAmount, salesTaxRate, accessoriesChosen, exteriorFinishChosen
+            </summary>
+            <param name="vehicleSalePrice">the selling price of the vehicle being sold.</param>
+            <param name="tradeInAmount">the amount offered to the customer for the trade in of their vehicle.</param>
+            <param name="salesTaxRate">the tax rate applied to the sale of a vehicle.</param>
+            <param name="accessoriesChosen">the value of the chosen accessories.</param>
+            <param name="exteriorFinishChosen">the value of the chosen exterior finish.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">The vehicleSalesPrice cannot be less than or equal to 0, The tradeInAmount cannot be less than 0 and salesTaxRate cannot be less than 0 or greater than 1.</exception>
+            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">The accessoriesChosen or exteriorFinishChosen is an invalid enumeration value.</exception>
+        </member>
+        <member name="M:Casaclang.Dennis.Business.SalesQuote.#ctor(System.Decimal,System.Decimal,System.Decimal)">
+            <summary>
+            Initializes and instance of the SalesQuote class with the specified vehicleSalePrice, tradeInAmount, salesTaxRate
+            </summary>
+            <param name="vehicleSalePrice">the selling price of the vehicle being sold.</param>
+            <param name="tradeInAmount">the amount offered to the customer for the trade in of their vehicle.</param>
+            <param name="salesTaxRate">the tax rate applied to the sale of a vehicle.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">The vehicleSalesPrice cannot be less than or equal to 0, The tradeInAmount cannot be less than 0 and salesTaxRate cannot be less than 0 or greater than 1.</exception>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.SalesQuote.VehicleSalePrice">
+            <summary>
+            Gets and sets the sale price of the vehicle.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">The value cannot be less than or equal to 0.</exception>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.SalesQuote.TradeInAmount">
+            <summary>
+            Gets and sets the trade in amount.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">The value cannot be less than 0.</exception>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.SalesQuote.AccessoriesChosen">
+            <summary>
+            Gets and sets the accessories chosen for the vehicle.
+            </summary>
+            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">The value is an invalid enumeration value.</exception>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.SalesQuote.ExteriorFinishChosen">
+            <summary>
+            Gets and sets the exterior finish chosen for the vehicle.
+            </summary>
+            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">The value is an invalid enumeration value.</exception>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.SalesQuote.AccessoriesCost">
+            <summary>
+            Gets the cost of the accessories chosen.
+            </summary>
+            <returns>The cost of the accessories chosen</returns>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.SalesQuote.FinishCost">
+            <summary>
+            Returns the cost of the exterior finish chosen.
+            </summary>
+            <returns>The cost of the exterior finish chosen.</returns>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.SalesQuote.SubTotal">
+            <summary>
+            Gets the sum of the vehicle’s sale price, accessories and exterior finish costs (rounded to two decimal places).
+            </summary>
+            <returns>The sum of the vehicle’s sale price, accessories and exterior finish costs (rounded to two decimal places).</returns>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.SalesQuote.SalesTax">
+            <summary>
+            Gets the amount of tax to charge based on the subtotal (rounded to two decimal places).
+            </summary>
+            <returns>The amount of tax to charge based on the subtotal (rounded to two decimal places).</returns>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.SalesQuote.Total">
+            <summary>
+            Gets the sum of the subtotal and taxes.
+            </summary>
+            <returns>The sum of the subtotal and taxes.</returns>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.SalesQuote.AmountDue">
+            <summary>
+            Gets the result of subtracting the trade-in amount from the total (rounded to two decimal places).
+            </summary>
+            <returns>The result of subtracting the trade-in amount from the total (rounded to two decimal places).</returns>
+        </member>
+        <member name="M:Casaclang.Dennis.Business.SalesQuote.OnVehiclePriceChanged">
+            <summary>
+            Raises the VehiclePriceChanged event.
+            </summary>
+        </member>
+        <member name="M:Casaclang.Dennis.Business.SalesQuote.OnTradeInAmountChanged">
+            <summary>
+            Raises the TradeInAmountChanged event.
+            </summary>
+        </member>
+        <member name="M:Casaclang.Dennis.Business.SalesQuote.OnAccessoriesChosenChanged">
+            <summary>
+            Raises the AccessoriesChosenChanged event.
+            </summary>
+        </member>
+        <member name="M:Casaclang.Dennis.Business.SalesQuote.OnExteriorFinishChosenChanged">
+            <summary>
+            Raises the ExteriorFinishChosenChanged event.
+            </summary>
+        </member>
+        <member name="T:Casaclang.Dennis.Business.ServiceInvoice">
+            <summary>
+            This class contains functionality that supports the business process of creating an invoice for the service department.
+            </summary>
+        </member>
+        <member name="E:Casaclang.Dennis.Business.ServiceInvoice.CostAdded">
+            <summary>
+            Occurs when a cost is added to the invoice.
+            </summary>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.ServiceInvoice.LabourCost">
+            <summary>
+            Gets the amount charged for labour.
+            </summary>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.ServiceInvoice.PartsCost">
+            <summary>
+            Gets the amount charged for parts.
+            </summary>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.ServiceInvoice.MaterialsCost">
+            <summary>
+            Gets the amount charged for materials.
+            </summary>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.ServiceInvoice.ProvincialSalesTaxCharged">
+            <summary>
+            Gets the amount of provincial sales tax charged to the customer. Provincial Sales Tax is not applied to labour cost.
+            </summary>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.ServiceInvoice.GoodsAndServicesTaxCharged">
+            <summary>
+            Gets the amount of goods and services tax charged to the customer.
+            </summary>
+        </member>
+        <member name="P:Casaclang.Dennis.Business.ServiceInvoice.SubTotal">
+            <summary>
+            Gets the subtotal of the Invoice.
+            </summary>
+        </member>
+        <member name="M:Casaclang.Dennis.Business.ServiceInvoice.#ctor(System.Decimal,System.Decimal)">
+            <summary>
+            Initializes an instance of Invoice with a provincial and goods and services tax rates.
+            </summary>
+            <param name="provincialSalesTaxRate">The rate of provincial tax charged to a customer.</param>
+            <param name="goodsAndServicesTaxRate">The rate of goods and services tax charged to a customer.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">The provincial sales tax rate and goods and services tax rate cannot be less than 0 or greater than 1.</exception>
+        </member>
+        <member name="M:Casaclang.Dennis.Business.ServiceInvoice.AddCost(Casaclang.Dennis.Business.CostType,System.Decimal)">
+            <summary>
+            Increments a specified cost by the specified amount.
+            </summary>
+            <param name="type">The type of cost being incremented.</param>
+            <param name="amount">The amount the cost is being incremented by.</param>
+            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">The argument is an invalid enumeration value.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">The argument cannot be less than or equal to 0.</exception>
+        </member>
+        <member name="M:Casaclang.Dennis.Business.ServiceInvoice.OnCostAdded">
+            <summary>
+            Raises the CostAdded event
+            </summary>
+        </member>
+    </members>
+</doc>
